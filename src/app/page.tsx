@@ -9,7 +9,6 @@ import { SectionAbout } from "@/components/SectionAbout";
 import { SectionJourney } from "@/components/SectionJourney";
 import { SectionProjects } from "@/components/SectionProjects";
 import { SectionAchievements } from "@/components/SectionAchievements";
-import { PirateCustomizer } from "@/components/PirateCustomizer";
 import { HandDrawnCard } from "@/components/HandDrawnCard";
 import { Header } from "@/components/Header";
 
@@ -43,9 +42,6 @@ export default function Home() {
         
         {/* 7. Achievements & Certifications */}
         <SectionAchievements />
-        
-        {/* 8. Interactive Tool */}
-        <PirateCustomizer />
 
         {/* Footer */}
         <footer className="py-20 border-t-4 border-black bg-white flex flex-col items-center justify-center">
