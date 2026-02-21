@@ -3,20 +3,19 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { useScrollProgress } from "@/hooks/use-scroll-progress";
 import { HandDrawnCard } from "./HandDrawnCard";
 import { Button } from "./ui/button";
-import { Code, Terminal, Database, Globe, Cloud, Layout, Cpu, Layers } from "lucide-react";
+import { Code, Terminal, Database, Globe, Cpu, Layers, Github, Linkedin, Sparkles } from "lucide-react";
 
 const TECH_TAGS = [
-  { name: "Node.js", icon: <Cpu className="w-4 h-4" /> },
-  { name: "React", icon: <Layout className="w-4 h-4" /> },
   { name: "Python", icon: <Terminal className="w-4 h-4" /> },
-  { name: "Javascript", icon: <Code className="w-4 h-4" /> },
-  { name: "HTML", icon: <Globe className="w-4 h-4" /> },
-  { name: "Typescript", icon: <Database className="w-4 h-4" /> },
-  { name: "Google Cloud", icon: <Cloud className="w-4 h-4" /> },
-  { name: "Docker", icon: <Layers className="w-4 h-4" /> },
+  { name: "Java", icon: <Cpu className="w-4 h-4" /> },
+  { name: "SQL", icon: <Database className="w-4 h-4" /> },
+  { name: "HTML5", icon: <Globe className="w-4 h-4" /> },
+  { name: "CSS3", icon: <Layers className="w-4 h-4" /> },
+  { name: "JavaScript", icon: <Code className="w-4 h-4" /> },
+  { name: "Git", icon: <Github className="w-4 h-4" /> },
+  { name: "VSCode", icon: <Terminal className="w-4 h-4" /> },
 ];
 
 export function SectionHero() {
@@ -31,31 +30,26 @@ export function SectionHero() {
         
         {/* Left Column: Text Content */}
         <div className="space-y-6">
-          <div className="text-blue-500 font-headline font-bold text-2xl animate-bounce">
-            Hi there! 👋
+          <div className="text-blue-500 font-headline font-bold text-2xl animate-bounce flex items-center gap-2">
+            Hi there! 🚀
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-headline font-black leading-tight">
-            I'm Marjo Ballabani.
+          <h1 className="text-5xl md:text-7xl font-headline font-black leading-tight">
+            I'm Prasannalakshmi MD.
           </h1>
           
           <p className="text-lg md:text-xl font-body font-medium max-w-xl text-muted-foreground leading-relaxed">
-            Based in Munich, Germany, I'm a <span className="text-black font-bold">Senior Software Engineer</span>. I love to work with distributed systems, data pipelines, and cloud technologies. I'm passionate about microservices, full stack development, and building cool stuff.
+            Highly motivated <span className="text-black font-bold">Computer Science undergraduate</span> specializing in AI and Data Science. Proficient in Java, Python, SQL, and full-stack development. Seeking to leverage technical expertise and strong leadership skills to create innovative software solutions.
           </p>
 
-          <div className="flex items-center gap-6 pt-4">
+          <div className="flex flex-wrap items-center gap-4 pt-4">
             <Button className="sketch-button bg-blue-400 hover:bg-blue-500 h-14 px-8 text-lg">
               Get in Touch!
             </Button>
-            <div className="relative group cursor-pointer">
-              <span className="font-headline font-bold text-lg hover:underline transition-all">buy me a coffee</span>
-              <div className="absolute -bottom-4 left-0 w-full h-1 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              <div className="absolute -right-12 top-0 transform rotate-12 opacity-50 group-hover:opacity-100 transition-opacity">
-                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 25C15 28 25 28 30 25M20 5L15 15M20 5L25 15" stroke="black" strokeWidth="2" strokeLinecap="round"/>
-                 </svg>
-              </div>
-            </div>
+            <Button variant="outline" className="hand-drawn-border h-14 px-8 text-lg bg-white flex items-center gap-2">
+              <Linkedin className="w-5 h-5 text-[#0077B5]" />
+              Connect on LinkedIn
+            </Button>
           </div>
         </div>
 
@@ -63,23 +57,25 @@ export function SectionHero() {
         <div className="relative flex justify-center">
           <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
             {/* Avatar Frame */}
-            <HandDrawnCard className="w-full h-full p-0 overflow-hidden relative z-10 bg-[#87CEEB]">
+            <HandDrawnCard className="w-full h-full p-0 overflow-hidden relative z-10 bg-[#FFDA63]">
                <Image 
-                src="https://picsum.photos/seed/marjo-hero/600/600" 
-                alt="Marjo" 
+                src="https://picsum.photos/seed/prasanna-hero/600/600" 
+                alt="Prasannalakshmi MD" 
                 fill 
                 className="object-cover"
                 data-ai-hint="friendly avatar"
                />
                <div className="absolute top-2 right-2 flex gap-2">
-                 <div className="w-8 h-8 bg-yellow-400 border-2 border-black rotate-12" />
+                 <div className="w-8 h-8 bg-white border-2 border-black rotate-12 flex items-center justify-center">
+                    <Sparkles className="w-4 h-4 text-blue-500" />
+                 </div>
                </div>
             </HandDrawnCard>
 
             {/* Floating Badges/Icons */}
             <div className="absolute -top-6 -left-6 z-20 animate-bounce-custom">
                <HandDrawnCard className="p-3 bg-white rotate-[-15deg]">
-                 <Code className="w-8 h-8 text-blue-500" />
+                 <Database className="w-8 h-8 text-blue-500" />
                </HandDrawnCard>
             </div>
             
@@ -91,13 +87,13 @@ export function SectionHero() {
 
             <div className="absolute -bottom-4 -left-8 z-20">
                <HandDrawnCard className="p-2 bg-green-300 rotate-[5deg]">
-                 <div className="w-6 h-6 border-2 border-black rounded-full flex items-center justify-center font-bold">!</div>
+                 <div className="w-6 h-6 border-2 border-black rounded-full flex items-center justify-center font-bold">AI</div>
                </HandDrawnCard>
             </div>
 
             <div className="absolute -bottom-4 right-0 z-20">
                <HandDrawnCard className="bg-[#4CAF50] text-white px-4 py-1 font-bold text-sm border-4 border-black">
-                 Full Stack Ninja
+                 AI & Data Science
                </HandDrawnCard>
             </div>
 

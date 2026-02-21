@@ -8,6 +8,7 @@ import { SectionHero } from "@/components/SectionHero";
 import { SectionAbout } from "@/components/SectionAbout";
 import { SectionJourney } from "@/components/SectionJourney";
 import { SectionProjects } from "@/components/SectionProjects";
+import { SectionAchievements } from "@/components/SectionAchievements";
 import { PirateCustomizer } from "@/components/PirateCustomizer";
 import { HandDrawnCard } from "@/components/HandDrawnCard";
 import { Header } from "@/components/Header";
@@ -21,33 +22,36 @@ export default function Home() {
       {/* 1. Loading Animation Section */}
       <SectionLoading />
 
-      {/* 2. Main Hero Section (Updated design) */}
+      {/* 2. Main Hero Section */}
       <SectionHero />
 
       {/* 3. About Section */}
       <SectionAbout />
 
-      {/* 4. Projects Section (New) */}
+      {/* 4. Projects Section */}
       <SectionProjects />
       
-      {/* 5. Journey Section */}
+      {/* 5. Education Journey Section */}
       <SectionJourney />
 
       {/* 6. Skills Section */}
       <SectionSkills />
       
-      {/* 7. Interactive Tool */}
+      {/* 7. Achievements & Certifications */}
+      <SectionAchievements />
+      
+      {/* 8. Interactive Tool */}
       <PirateCustomizer />
 
       {/* Footer */}
       <footer className="py-20 border-t-4 border-black bg-white flex flex-col items-center justify-center">
         <HandDrawnCard className="p-12 text-center max-w-lg">
-          <h2 className="text-3xl font-headline font-black mb-4">THANKS FOR SCROLLING!</h2>
+          <h2 className="text-3xl font-headline font-black mb-4 uppercase">THANKS FOR STOPPING BY!</h2>
           <p className="font-body mb-8">
-            This site was built with a lot of ink, pixels, and scroll-events.
+            Let's build something innovative together.
           </p>
-          <div className="font-code text-sm">
-            © 2024 MARJO BALLABANI / SCROLLFOLIO.TS
+          <div className="font-code text-sm uppercase">
+            © 2024 PRASANNALAKSHMI MD / PORTFOLIO
           </div>
         </HandDrawnCard>
       </footer>

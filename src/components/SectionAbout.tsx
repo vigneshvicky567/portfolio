@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
 import { suggestHighlightKeywords } from "@/ai/flows/about-section-keyword-highlighter";
 
-const ABOUT_TEXT = "I am a Full Stack Developer based in Munich with over 11 years of experience in building scalable web applications. My journey started with a fascination for Microservices and cloud-native architecture. I believe that code is an art form, and every line should be clean, efficient, and meaningful. When I'm not coding, you'll find me sketching or exploring the latest in creative technology.";
+const ABOUT_TEXT = "I am a highly motivated Computer Science undergraduate specializing in AI and Data Science. My academic journey has equipped me with a strong foundation in programming and problem-solving. I am proficient in Java, Python, and SQL, and I have hands-on experience in full-stack development using HTML, CSS, and JavaScript to build responsive web applications. I am seeking to leverage my technical expertise and strong leadership skills in a dynamic organization focused on creating innovative software solutions.";
 
 export function SectionAbout() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,7 +18,7 @@ export function SectionAbout() {
         const result = await suggestHighlightKeywords({ aboutSectionText: ABOUT_TEXT });
         setKeywords(result.keywords);
       } catch (e) {
-        setKeywords(["Munich", "11 years", "Microservices", "Full Stack Developer"]);
+        setKeywords(["AI and Data Science", "Java", "Python", "SQL", "full-stack development"]);
       }
     }
     getKeywords();
@@ -26,15 +26,11 @@ export function SectionAbout() {
 
   const renderTextWithHighlights = () => {
     let parts = [ABOUT_TEXT];
-    
-    // Sort keywords by length descending to match longer phrases first
     const sortedKeywords = [...keywords].sort((a, b) => b.length - a.length);
-
-    // Simple heuristic for triggering highlights: distribute them across 0.2 to 0.8 progress
     const getProgressForKeyword = (index: number) => 0.2 + (index / sortedKeywords.length) * 0.6;
 
     return (
-      <p className="text-2xl md:text-4xl leading-relaxed font-headline font-bold text-center">
+      <div className="text-xl md:text-3xl leading-relaxed font-headline font-bold text-center space-y-4">
         {ABOUT_TEXT.split(' ').map((word, i) => {
           const cleanedWord = word.replace(/[.,]/g, '');
           const keywordIndex = sortedKeywords.findIndex(k => k.toLowerCase().includes(cleanedWord.toLowerCase()));
@@ -59,12 +55,12 @@ export function SectionAbout() {
             </span>
           );
         })}
-      </p>
+      </div>
     );
   };
 
   return (
-    <section ref={containerRef} className="min-h-screen bg-white py-24 flex flex-col items-center justify-center px-4">
+    <section id="about" ref={containerRef} className="min-h-screen bg-white py-24 flex flex-col items-center justify-center px-4">
       <div className="max-w-4xl w-full">
         <h2 className="text-6xl font-headline font-black mb-16 text-center border-b-8 border-black pb-4 inline-block mx-auto">
           ABOUT
@@ -73,7 +69,7 @@ export function SectionAbout() {
           {renderTextWithHighlights()}
         </div>
         <p className="mt-12 text-center font-code text-muted-foreground animate-pulse">
-          Keep scrolling to see the highlight effect...
+          Keep scrolling to see my focus areas...
         </p>
       </div>
     </section>
