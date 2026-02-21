@@ -72,7 +72,7 @@ export function SectionHero() {
           <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px]">
             <div className="w-full h-full p-0 overflow-hidden relative z-10 bg-white border-8 border-black rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                <Image 
-                src="/profile.jpeg"
+                src="public/profile.jpeg"
                 alt="Prasannalakshmi MD smiling avatar" 
                 fill 
                 className="object-cover"
