@@ -1,0 +1,23 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "avatar-base",
+      "description": "A quirky sketch-style character illustration",
+      "imageUrl": "https://picsum.photos/seed/marjo-avatar/400/400",
+      "imageHint": "sketch avatar"
+    },
+    {
+      "id": "europe-map",
+      "description": "A hand-drawn map of Europe for the journey section",
+      "imageUrl": "https://picsum.photos/seed/map-europe/800/600",
+      "imageHint": "illustrated map"
+    },
+    {
+      "id": "hero-bg",
+      "description": "Sketchy background patterns",
+      "imageUrl": "https://picsum.photos/seed/sketch-bg/1200/800",
+      "imageHint": "doodle patterns"
+    }
+  ]
+}
