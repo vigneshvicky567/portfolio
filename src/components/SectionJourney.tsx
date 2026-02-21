@@ -56,9 +56,17 @@ export function SectionJourney() {
           {/* Main Education Timeline Area */}
           <div className="lg:col-span-2 space-y-4 md:space-y-8">
             {EDUCATION.map((edu, i) => {
-              const isActive = progress > (i / EDUCATION.length);
+              // Trigger activation when the item is roughly in the middle 60% of viewport
+              const threshold = 0.2 + (i / EDUCATION.length) * 0.5;
+              const isActive = progress > threshold;
+              
               return (
-                <HandDrawnCard key={i} className={`p-5 md:p-8 transition-all duration-500 ${isActive ? 'rotate-0 bg-white' : 'rotate-1 bg-gray-50 opacity-60'}`}>
+                <HandDrawnCard 
+                  key={i} 
+                  className={`p-5 md:p-8 transition-all duration-700 ease-out ${
+                    isActive ? 'rotate-0 translate-x-0 opacity-100 bg-white' : 'rotate-2 translate-x-4 opacity-0 bg-gray-50'
+                  }`}
+                >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 md:gap-4 mb-3 md:mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 md:w-12 md:h-12 border-2 md:border-4 border-black bg-blue-300 flex items-center justify-center shrink-0">
@@ -84,7 +92,9 @@ export function SectionJourney() {
 
           {/* Languages & Extra Info Area */}
           <div className="space-y-4 md:space-y-8">
-            <HandDrawnCard className="p-6 md:p-8 bg-yellow-50">
+            <HandDrawnCard 
+              className={`p-6 md:p-8 bg-yellow-50 transition-all duration-1000 ${progress > 0.4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            >
               <div className="flex items-center gap-2 mb-4 md:mb-6">
                 <Languages className="w-5 h-5 md:w-6 md:h-6" />
                 <h3 className="font-headline font-black text-xl md:text-2xl uppercase">Languages</h3>
@@ -99,7 +109,9 @@ export function SectionJourney() {
               </div>
             </HandDrawnCard>
 
-            <HandDrawnCard className="p-6 md:p-8 bg-blue-50 relative overflow-hidden">
+            <HandDrawnCard 
+              className={`p-6 md:p-8 bg-blue-50 relative overflow-hidden transition-all duration-1000 delay-300 ${progress > 0.6 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            >
                <div className="relative z-10">
                  <h3 className="font-headline font-black text-xl md:text-2xl uppercase mb-3 md:mb-4">Current Focus</h3>
                  <p className="font-body text-xs md:text-sm">

@@ -26,15 +26,17 @@ export function SectionAbout() {
 
   const renderTextWithHighlights = () => {
     const sortedKeywords = [...keywords].sort((a, b) => b.length - a.length);
-    const getProgressForKeyword = (index: number) => 0.2 + (index / sortedKeywords.length) * 0.6;
-
+    
     return (
       <div className="text-lg sm:text-xl md:text-3xl leading-relaxed font-headline font-bold text-center space-y-4">
         {ABOUT_TEXT.split(' ').map((word, i) => {
           const cleanedWord = word.replace(/[.,]/g, '');
           const keywordIndex = sortedKeywords.findIndex(k => k.toLowerCase().includes(cleanedWord.toLowerCase()));
           const isKeyword = keywordIndex !== -1;
-          const isActive = isKeyword && progress > getProgressForKeyword(keywordIndex);
+          
+          // Adjust activation: start highlighting when the section is 30% into view
+          const activationThreshold = 0.3 + (i / ABOUT_TEXT.split(' ').length) * 0.4;
+          const isActive = isKeyword && progress > activationThreshold;
 
           const colors = ['bg-pink-300', 'bg-green-300', 'bg-blue-300', 'bg-yellow-300'];
           const highlightColor = colors[keywordIndex % colors.length];
@@ -42,9 +44,11 @@ export function SectionAbout() {
           return (
             <span 
               key={i} 
-              className={`relative inline-block mx-0.5 md:mx-1 transition-colors duration-500`}
+              className={`relative inline-block mx-0.5 md:mx-1`}
             >
-              <span className={`relative z-10`}>{word}</span>
+              <span className={`relative z-10 transition-colors duration-300 ${isActive ? 'text-black' : 'text-black/70'}`}>
+                {word}
+              </span>
               {isKeyword && (
                 <span 
                   className={`absolute bottom-0 left-0 h-1/2 md:h-3/4 -z-0 transition-all duration-700 ease-out ${highlightColor}`}
