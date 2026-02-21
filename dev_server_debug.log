@@ -1,0 +1,208 @@
+
+> nextn@0.1.0 dev
+> next dev --turbopack -p 9002
+
+   ▲ Next.js 15.5.9 (Turbopack)
+   - Local:        http://localhost:9002
+   - Network:      http://192.168.0.2:9002
+
+ ✓ Starting...
+ ✓ Ready in 2.8s
+ ○ Compiling / ...
+ ✓ Compiled / in 11.8s
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 13882ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 340ms
+Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.'
+}
+ ⨯ Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.',
+  traceId: '697288d5f17a7ef977b46ddff3145ceb',
+  ignoreFailedSpan: true,
+  digest: '913495518'
+}
+ POST / 500 in 1760ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 299ms
+Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.'
+}
+ ⨯ Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.',
+  traceId: '6ee5c8464ce32c4a416b9ac6c08d019a',
+  ignoreFailedSpan: true,
+  digest: '2064585200'
+}
+ POST / 500 in 1071ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1154ms
+Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.'
+}
+ ⨯ Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.',
+  traceId: '6b4c3a75250ab130d0b5193db0041c8b',
+  ignoreFailedSpan: true,
+  digest: '2064585200'
+}
+ POST / 500 in 1541ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 653ms
+Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.'
+}
+ ⨯ Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.',
+  traceId: '074a369e6aa9b2f550fd9a7ae9ea59a7',
+  ignoreFailedSpan: true,
+  digest: '2064585200'
+}
+ POST / 500 in 1717ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 272ms
+ ⨯ [Error: aborted] { code: 'ECONNRESET', digest: '1052313065' }
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 259ms
+ ⨯ [Error: aborted] { code: 'ECONNRESET', digest: '1052313065' }
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 329ms
+Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.'
+}
+ ⨯ Error [GenkitError]: INVALID_ARGUMENT: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.
+    at async (src/ai/flows/about-section-keyword-highlighter.ts:60:24)
+  58 |   },
+  59 |   async (input) => {
+> 60 |     const { output } = await highlightKeywordsPrompt(input);
+     |                        ^
+  61 |     if (!output) {
+  62 |       throw new Error('Failed to generate highlight keywords.');
+  63 |     } {
+  source: undefined,
+  status: 'INVALID_ARGUMENT',
+  detail: undefined,
+  code: 400,
+  originalMessage: 'Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key.',
+  traceId: '2f822daf8b8244c8c9ee78db5ad1e231',
+  ignoreFailedSpan: true,
+  digest: '2064585200'
+}
+ POST / 500 in 1124ms

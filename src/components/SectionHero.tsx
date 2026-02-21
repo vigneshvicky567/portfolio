@@ -79,6 +79,7 @@ export function SectionHero() {
                 priority // LCP Optimization
                 sizes="(max-width: 768px) 280px, (max-width: 1200px) 450px, 450px"
                 data-ai-hint="friendly avatar"
+                unoptimized
                />
             </div>
 
